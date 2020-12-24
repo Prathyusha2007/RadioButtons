@@ -1,0 +1,26 @@
+import tkinter as tk
+from tkinter import ttk
+
+root=tk.Tk()
+root.title("RadioButtons")
+root.geometry("500x200")
+
+title=tk.Label(root,text="Choose you favorite Programming Language:",justify=tk.LEFT)
+title.config(font=("Berlin Sans FB",22))
+title.pack(pady=3)
+
+x=tk.IntVar()
+radio_btn=tk.Radiobutton(root,text="Pyhton",variable=x,value=1)
+radio_btn.pack(anchor=tk.W)
+
+radio_btn_1=tk.Radiobutton(root,text="Java",variable=x,value=2)
+radio_btn_1.pack(anchor=tk.W)
+
+radio_btn_2=tk.Radiobutton(root,text="C++",variable=x,value=3)
+radio_btn_2.pack(anchor=tk.W)
+
+def submit():
+    python=x.get()
+    java=x.get()
+    C=x.get()
+    print(f"Python:{python}\nJava:{java}\nC++:{C}")
